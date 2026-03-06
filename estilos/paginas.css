@@ -1,0 +1,37 @@
+        body { background-color: #f4f6f9; display: flex; font-family: sans-serif; }
+        .sidebar { width: 250px; height: 100vh; background: #343a40; color: white; padding: 15px; }
+        .sidebar a { color: #c2c7d0; text-decoration: none; display: block; padding: 10px; border-radius: 4px; }
+        .sidebar a:hover, .active { background: #495057; color: #fff; }
+        .main-content { flex-grow: 1; padding: 20px; }
+        .badge-admin { background-color: #17a2b8; color: white; }
+        .badge-user { background-color: #28a745; color: white; }
+
+
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    margin-left: 260px; /* mismo ancho que tu sidebar */
+    padding: 30px;
+}
+
+/* Evita que todo quede pegado arriba */
+.card {
+    border-radius: 12px;
+}
+
+/* Botones alineados */
+.gap-2 > * {
+    margin-right: 10px;
+}
+
+/* Ajuste tabla */
+.table th {
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+}

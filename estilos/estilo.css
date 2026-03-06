@@ -1,0 +1,120 @@
+:root {
+            --sidebar-width: 260px;
+            --primary-color: #4e73df;
+            --dark-bg: #1a1c23;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fc;
+            margin: 0;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            background: var(--dark-bg);
+            color: #fff;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .user-profile {
+            padding: 20px 10px;
+            border-bottom: 1px solid #343a40;
+        }
+
+        .user-avatar i {
+            color: #d1d3e2;
+            margin-bottom: 10px;
+        }
+
+        .user-name {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .user-status {
+            font-size: 0.75rem;
+            color: #1cc88a;
+        }
+
+        .sidebar-nav {
+            padding: 15px 0;
+        }
+
+        .nav-title {
+            padding: 0 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #6e707e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: #a1a1a1;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .nav-link.active {
+            color: #fff;
+            background: var(--primary-color);
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .logout {
+            color: #e74a3b;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 30px;
+            min-height: 100vh;
+        }
+
+        /* Table & Cards */
+        .card {
+            border: none;
+            border-radius: 8px;
+        }
+
+        .table thead {
+            background-color: #4e73df;
+            color: white;
+        }
+
+        .badge-admin { background-color: #1cc88a; color: white; }
+        .badge-user { background-color: #858796; color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar { margin-left: calc(-1 * var(--sidebar-width)); }
+            .main-content { margin-left: 0; }
+        }
+
+        .badge-admin { padding: 0.5em 1em; border-radius: 50px; }
+.badge-user { padding: 0.5em 1em; border-radius: 50px; }
